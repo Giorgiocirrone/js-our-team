@@ -37,16 +37,13 @@ const teamMembers = [
     },
 ];
 
-// Recupero l'elemento dal DOM
-const teamContainer = document.querySelector('.team-container');
 
-// Elaboro i dati
-let cards = '';
+//voglio una funzione per generare le immagini 
 
-for (const member of teamMembers) {
+
+const createCard = () => {
     const { image, name, role } = member;
-
-    cards += `
+    const card = `
         <div class="team-card">
             <div class="card-image">
                 <img src="image/${image}" alt="${name}">
@@ -57,6 +54,25 @@ for (const member of teamMembers) {
             </div>
         </div>
     `;
+
+    return card;
+
+
+}
+
+
+
+
+// Recupero l'elemento dal DOM
+const teamContainer = document.querySelector('.team-container');
+
+// Elaboro i dati
+let cards = '';
+
+for (const member of teamMembers) {
+
+
+
 }
 
 // Inserisco le schede nel container
