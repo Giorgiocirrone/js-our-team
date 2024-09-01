@@ -2,10 +2,10 @@
 const teamMembers = [
 
 
-
+    //mettere un id rende univoca la determianzione della 'chiave'
     {
 
-
+        id: 1,
         name: 'Wayne Barnett',
 
         role: 'Founder & CEO',
@@ -18,12 +18,12 @@ const teamMembers = [
 
 
     {
-
+        id: 2,
 
         name: 'Angela Caroll',
 
         role: 'Chief Editor ',
-        image: '	angela-caroll-chief-editor.jpg',
+        image: 'angela-caroll-chief-editor.jpg',
 
 
 
@@ -32,12 +32,13 @@ const teamMembers = [
 
 
     {
+        id: 3,
 
 
         name: 'Walter Gordon',
 
         role: 'Office Manager',
-        image: '	walter-gordon-office-manager.jpg',
+        image: 'walter-gordon-office-manager.jpg',
 
 
 
@@ -45,6 +46,7 @@ const teamMembers = [
 
 
     {
+        id: 4,
 
 
         name: 'Angela Lopez',
@@ -58,12 +60,13 @@ const teamMembers = [
 
 
     {
+        id: 5,
 
 
         name: 'Scott Estrada ',
 
         role: 'Developer ',
-        image: '	scott-estrada-developer.jpg',
+        image: 'scott-estrada-developer.jpg',
 
 
 
@@ -71,6 +74,7 @@ const teamMembers = [
 
 
     {
+        id: 6,
 
 
         naname: 'Barbara Ramos',
@@ -95,6 +99,11 @@ const teamMembers = [
 
 ];
 
+
+for (let member of teamMembers) {
+    //validazione
+    console.log(`${member.name}-${member.role}-${member.image}`);
+}
 
 
 
