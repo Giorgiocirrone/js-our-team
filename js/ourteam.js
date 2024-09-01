@@ -41,6 +41,14 @@ const teamMembers = [
 //voglio una funzione per generare le immagini 
 
 
+
+const teamContainer = document.querySelector('.team-container');
+const form = getElementById('member-form');
+const nameField = getElementById('form');
+const roleField = getElementById('role');
+const imageField = getElementById('image');
+
+
 const createCard = member => {
     const { image, name, role } = member;
     const card = `
@@ -79,3 +87,42 @@ for (const member of teamMembers) {
 
 // Inserisco le schede nel container
 teamContainer.innerHTML = cards;
+
+
+
+
+form.addEventListener('submit', e => {
+
+
+
+    //il caricamento della pagina è una conseguenza dell'invio 
+    e.preventDefault();
+
+    const name = nameField.value.trim();
+    const role = roleField.value.trim();
+    const image = imageField.value.trim();
+
+
+    //validazione 
+
+
+    if (!name || !role || !image) {
+
+        alert('tuttii i campi sono obligatori');
+        return;
+    }
+
+    const newMember = {//creazione dinamica di un oggetto 
+        id: teamMembers.length + 1,
+        name: name,
+        role: role,
+        image: image,
+    }
+
+    teamMembers.push(newMember);
+    teamContainer.innerHTML = cards;
+
+
+})
+
+
